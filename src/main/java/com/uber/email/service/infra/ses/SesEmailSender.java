@@ -3,13 +3,13 @@ package com.uber.email.service.infra.ses;
 import com.amazonaws.AmazonServiceException;
 import com.amazonaws.services.simpleemail.AmazonSimpleEmailService;
 import com.amazonaws.services.simpleemail.model.*;
-import com.uber.email.service.adapters.EmailSernderGateway;
+import com.uber.email.service.controller.EmailSenderGateway;
 import com.uber.email.service.core.exception.EmailServiceException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class SesEmailSender implements EmailSernderGateway {
+public class SesEmailSender implements EmailSenderGateway {
 
     private final AmazonSimpleEmailService amazonSimpleEmailService;
 
